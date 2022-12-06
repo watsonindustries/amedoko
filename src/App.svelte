@@ -1,11 +1,11 @@
 <script>
-	import Example from "./Example.svelte";
+	import DokoImage from "./DokoImage.svelte";
 </script>
 
 <svelte:options tag="my-app"/>
 <main>
-	<p>Hello</p>
-	<Example />
+	<h1>Ame Doko?</h1>
+	<DokoImage />
 </main>
 <style>
 	/* It can be empty :) */
