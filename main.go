@@ -6,8 +6,6 @@ import (
 )
 
 func main() {
-
-	//template render engine
 	engine := html.New("./templates", ".html")
 
 	app := fiber.New(fiber.Config{

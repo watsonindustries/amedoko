@@ -1,12 +1,18 @@
+<svelte:options tag="my-app" />
+
 <script>
-	import DokoImage from "./DokoImage.svelte";
+    import DokoImage from "./DokoImage.svelte";
+    import LastStream from "./LastStream.svelte";
+    import NextStream from "./NextStream.svelte";
 </script>
 
-<svelte:options tag="my-app"/>
 <main>
-	<h1>Ame Doko?</h1>
-	<DokoImage />
+    <h1>Ame Doko?</h1>
+    <DokoImage />
+		<LastStream />
+    <NextStream />
 </main>
+
 <style>
-	/* It can be empty :) */
+    /* It can be empty :) */
 </style>
