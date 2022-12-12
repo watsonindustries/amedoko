@@ -1,7 +1,9 @@
 <svelte:options tag="last-stream" />
 
-<script>
-    let lastLiveTime = "some time ago";
+<script lang="ts">
+		import { diffInDaysFloored } from "./Utils";
+    let lastLive = { start_actual: "some time ago" };
+    let diffInDays;
 
     async function fetchLastLiveData() {
         const headers = new Headers();
@@ -14,10 +16,14 @@
         );
 
         let json = await response.json();
-        lastLiveTime = json[0].start_actual;
+        lastLive = json[0];
+        let lastLiveDate = new Date(lastLive.start_actual);
+        let currentDate = new Date();
+
+        diffInDays = diffInDaysFloored(currentDate, lastLiveDate);
     }
 
     fetchLastLiveData();
 </script>
 
-<p>Last stream was: {lastLiveTime}</p>
+<p>Last stream was: {diffInDays} days ago</p>

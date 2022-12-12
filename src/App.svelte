@@ -1,6 +1,6 @@
 <svelte:options tag="my-app" />
 
-<script>
+<script lang="ts">
     import DokoImage from "./DokoImage.svelte";
     import LastStream from "./LastStream.svelte";
     import NextStream from "./NextStream.svelte";
