@@ -1,6 +1,6 @@
 import type { PageLoad } from './$types';
 import { HolodexApiClient } from 'holodex.js';
-import { fetchLastLiveData, fetchNextLiveData, diffInDaysFloored } from '../utils';
+import { fetchLastLiveData, fetchNextLiveData, deltaFormatted } from '../utils';
 
 export const load: PageLoad = (async ({ params: { } }) => {
 	const channelId = "UCyl1z3jo3XHR1riLFKG5UAg";
@@ -14,8 +14,8 @@ export const load: PageLoad = (async ({ params: { } }) => {
 		let lastLive = await fetchLastLiveData(client, channelId);
 		let nextLive = await fetchNextLiveData(client, channelId);
 		return {
-			nextStreamDays: diffInDaysFloored(nextLive.scheduledStart, current),
-			lastStreamDays: diffInDaysFloored(current, lastLive.actualStart || lastLive.scheduledStart || lastLive.publishedAt)
+			lastStreamDays: deltaFormatted(current, lastLive.actualStart || lastLive.scheduledStart || lastLive.publishedAt),
+			nextStreamDays: deltaFormatted(nextLive.scheduledStart, current)
 		};
 	};
 
