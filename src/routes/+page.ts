@@ -11,11 +11,11 @@ export const load: PageLoad = (async ({ params: { } }) => {
 
 	let data = async () => {
 		let current = new Date();
-		let lastLive = await fetchLastLiveData(client, channelId) || { actualStart: current };
-		let nextLive = await fetchNextLiveData(client, channelId) || { scheduledStart: current };
+		let lastLive = await fetchLastLiveData(client, channelId);
+		let nextLive = await fetchNextLiveData(client, channelId);
 		return {
 			nextStreamDays: diffInDaysFloored(nextLive.scheduledStart, current),
-			lastStreamDays: diffInDaysFloored(current, lastLive.actualStart)
+			lastStreamDays: diffInDaysFloored(current, lastLive.actualStart || lastLive.scheduledStart || lastLive.publishedAt)
 		};
 	};
 
