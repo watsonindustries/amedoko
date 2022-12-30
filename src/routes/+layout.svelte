@@ -16,10 +16,13 @@
         <p class="mx-1">Copyright © Watson Industries Inc.</p>
         <p class="mx-1">Not affiliated with Cover Corp in any way.</p>
     </div>
-    <div class="flex">
+    <div class="flex flex-col">
         <a
-            class="text-center mx-auto underline"
+            class="text-center mx-auto underline my-2"
             href="https://github.com/watsonindustries/amedoko">Source Code</a
         >
+        <a class="text-center mx-auto underline" href="/about">
+            About
+        </a>
     </div>
 </footer>
