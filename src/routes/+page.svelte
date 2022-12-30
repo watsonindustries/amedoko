@@ -15,14 +15,14 @@
     <h1 class="text-5xl font-bold text-center my-2">Ame Doko?</h1>
     
     <span class="text-center"
-        >Last stream was <p class="font-bold">
+        >Last stream was <a href="https://youtu.be/{pastVideo.videoId}"><p class="font-bold">
             {lastStreamDelta} ago
-        </p></span
+        </p></a></span
     >
 
     {#if nextVideo}
     <span class="text-center"
-        >Next stream in <p class="font-bold">{deltaFormatted(nextVideo.scheduledStart, currentDate)}</p></span
+        >Next stream in <a href="https://youtu.be/{nextVideo.videoId}"><p class="font-bold">{deltaFormatted(nextVideo.scheduledStart, currentDate)}</p></a> </span
     >
     {/if}
 
