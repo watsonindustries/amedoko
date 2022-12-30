@@ -1,6 +1,6 @@
 <script lang="ts">
-    let src = "nagi-amedoko.jpeg";
-    let imageName = "Ame Doko gator by Nabi";
+    export let src = "nagi-amedoko.jpeg";
+    export let imageName = "Ame Doko gator by Nabi";
 </script>
 
 <a

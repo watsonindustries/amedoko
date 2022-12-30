@@ -1,4 +1,4 @@
-import { HolodexApiClient, VideoStatus, VideoType } from 'holodex.js'
+import { HolodexApiClient, Video, VideoStatus, VideoType } from 'holodex.js'
 
 /** Subtracts `dateA` from `dateB` */
 export function diffInDaysFloored(dateA: Date, dateB: Date): number {
@@ -17,7 +17,7 @@ export function deltaFormatted(dateA: Date, dateB: Date): string {
 	return `${days} days ${hours} hours ${minutes} minutes`
 }
 
-export async function fetchLastLiveData(client: HolodexApiClient, channelId: string) {
+export async function fetchLastLiveData(client: HolodexApiClient, channelId: string): Promise<Video> {
 	let videos = await client.getVideos({
 		channel_id: channelId,
 		include: "live_info",
@@ -29,7 +29,7 @@ export async function fetchLastLiveData(client: HolodexApiClient, channelId: str
 	return videos[0];
 }
 
-export async function fetchNextLiveData(client: HolodexApiClient, channelId: string) {
+export async function fetchNextLiveData(client: HolodexApiClient, channelId: string): Promise<Video> {
 	let videos = await client.getVideos({
 		channel_id: channelId,
 		include: "live_info",
@@ -39,4 +39,11 @@ export async function fetchNextLiveData(client: HolodexApiClient, channelId: str
 	});
 
 	return videos[0];
+}
+
+/** Returns a promise of an array of both live and upcoming streams for a given channel */
+export async function fetchLiveUpcomingData(client: HolodexApiClient, channelId: string): Promise<Video[]> {
+	let videos = await client.getLiveVideosByChannelId(channelId);
+
+	return videos;
 }

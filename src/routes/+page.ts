@@ -1,6 +1,6 @@
 import type { PageLoad } from './$types';
-import { HolodexApiClient } from 'holodex.js';
-import { fetchLastLiveData, fetchNextLiveData, deltaFormatted } from '../utils';
+import { HolodexApiClient, VideoStatus } from 'holodex.js';
+import { fetchLastLiveData, fetchLiveUpcomingData } from '../utils';
 
 export const load: PageLoad = (async ({ params: { } }) => {
 	const channelId = "UCyl1z3jo3XHR1riLFKG5UAg";
@@ -10,13 +10,13 @@ export const load: PageLoad = (async ({ params: { } }) => {
 	});
 
 	let data = async () => {
-		let current = new Date();
-		let lastLive = await fetchLastLiveData(client, channelId);
-		let nextLive = await fetchNextLiveData(client, channelId);
-		return {
-			lastStreamDays: deltaFormatted(current, lastLive.actualStart || lastLive.scheduledStart || lastLive.publishedAt),
-			nextStreamDays: deltaFormatted(nextLive.scheduledStart, current)
-		};
+		let currentLiveAndUpcoming = await fetchLiveUpcomingData(client, channelId);
+		let pastVideo = await fetchLastLiveData(client, channelId);
+
+		let liveVideo = currentLiveAndUpcoming.find(video => video.status === VideoStatus.Live);
+		let nextVideo = currentLiveAndUpcoming.find(video => video.status === VideoStatus.Upcoming);
+
+		return { pastVideo, liveVideo, nextVideo };
 	};
 
 	return await data();

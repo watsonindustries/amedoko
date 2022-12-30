@@ -14,7 +14,7 @@
     </div>
     <div class="flex flex-row mx-auto py-5">
         <p class="mx-1">Copyright © Watson Industries Inc.</p>
-        <p class="mx-1">Not affiliated with Hololive Corp in any way.</p>
+        <p class="mx-1">Not affiliated with Cover Corp in any way.</p>
     </div>
     <div class="flex">
         <a
