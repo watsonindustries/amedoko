@@ -23,10 +23,12 @@
         <a class="text-center mx-auto underline" href="/about">
             About
         </a>
+        <a class="text-center mx-auto underline" href="/privacy">
+            Privacy Policy
+        </a>
     </div>
     <div class="flex flex-row mx-auto py-5">
         <p class="mx-1">Copyright © Watson Industries Inc.</p>
         <p class="mx-1">Not affiliated with Cover Corp in any way.</p>
     </div>
-
 </footer>
