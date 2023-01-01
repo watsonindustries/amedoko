@@ -14,7 +14,9 @@ export const load: PageLoad = (async ({ params: { } }) => {
 		let pastVideo = await fetchLastLiveData(client, channelId);
 
 		let liveVideo = currentLiveAndUpcoming.find(video => video.status === VideoStatus.Live);
-		let nextVideo = currentLiveAndUpcoming.find(video => video.status === VideoStatus.Upcoming);
+		let nextVideo = currentLiveAndUpcoming
+			.sort((a, b) => a.scheduledStart.getTime() - b.scheduledStart.getTime())
+			.find(video => video.status === VideoStatus.Upcoming);
 
 		return { pastVideo, liveVideo, nextVideo };
 	};
