@@ -26,7 +26,7 @@
     </p>
 
     <div class="text-center mx-auto">
-        <a href="/" type="button" class="flex flex-row text-ame-light-yellow bg-ame-dark-brown hover:bg-stone-600 focus:ring-4 focus:ring-stone-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">
+        <a href="/" type="button" class="flex flex-row text-ame-light-yellow bg-ame-dark-brown hover:bg-stone-600 focus:ring-4 focus:ring-stone-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 my-3 focus:outline-none">
             <Icon src="{Home}" solid size="20" class="mr-1" />Go Back
         </a>
     </div>
