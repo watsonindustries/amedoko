@@ -1,6 +1,9 @@
 <script>
     import "../app.css";
+    import {MetaTags} from 'svelte-meta-tags';
 </script>
+
+<MetaTags title="Ame Doko?" description="Find out when you can see Ame!" />
 
 <slot />
 
