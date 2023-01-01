@@ -18,7 +18,7 @@
     
     {#if !liveVideo}
     <span class="text-center"
-        >Last stream was <a href="https://youtu.be/{pastVideo.videoId}"><p class="font-bold">
+        >Ame last seen<a href="https://youtu.be/{pastVideo.videoId}"><p class="font-bold">
             {lastStreamDelta} ago
         </p></a></span>
     {/if}

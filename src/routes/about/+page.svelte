@@ -26,6 +26,8 @@
 
     <p class="my-2 text-xl">
         AmeDoko patent and license owned by: <a href="https://twitter.com/DaniruKun" class="underline">@DaniruKun</a>
+        <br>
+        Crying Gator art kindly provided by: <a href="https://twitter.com/Nagi_Nyaaa" class="underline">@Nagi</a>
     </p>
 
     <div class="text-center mx-auto">
