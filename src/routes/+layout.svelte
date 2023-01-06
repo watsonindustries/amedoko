@@ -4,7 +4,8 @@
 
     import amedokoLogo from "$lib/assets/amedoko-landscape-twitter.png";
 
-    let url = "https://amedoko.watsonindustries.live";
+    const url = "https://amedoko.watsonindustries.live";
+    const description = "Find out where is Ame!";
 </script>
 
 <MetaTags
@@ -16,9 +17,23 @@
         site: "@amedoko",
         cardType: "summary",
         title: "Ame Doko?",
-        description: "Find out where is Ame!",
+        description: description,
         image: amedokoLogo,
         imageAlt: "AmeDoko Logo",
+    }}
+    openGraph={{
+        type: "website",
+        url: "https://amedoko.watsonindustries.live",
+        title: "Ame Doko?",
+        description: description,
+        images: [
+            {
+                url: amedokoLogo,
+                width: 768,
+                height: 384,
+                alt: "AmeDoko Logo",
+            },
+        ],
     }}
 />
 
