@@ -15,7 +15,7 @@
         url: amedokoLogo,
         width: 384,
         height: 384,
-        alt: 'Og Image Alt'
+        alt: 'AmeDoko Logo'
       }
     ]
   }}/>
@@ -37,6 +37,9 @@
         >
         <a class="text-center mx-auto underline" href="/about">
             About
+        </a>
+        <a class="text-center mx-auto underline" href="https://watsonindustries.live">
+            Watson Industries
         </a>
         <a class="text-center mx-auto underline" href="/privacy">
             Privacy Policy

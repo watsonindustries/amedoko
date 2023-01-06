@@ -18,6 +18,13 @@ export function deltaFormatted(dateA: Date, dateB: Date): string {
 	return `${days > 0 ? days : ''} ${dayname} ${hours} hours ${minutes} minutes ${seconds} s`
 }
 
+export function getNextElement(array, index) {
+	if (index >= array.length - 1) {
+		return array[0];
+	}
+	return array[index + 1];
+}
+
 export async function fetchLastLiveData(client: HolodexApiClient, channelId: string): Promise<Video> {
 	let videos = await client.getVideos({
 		channel_id: channelId,

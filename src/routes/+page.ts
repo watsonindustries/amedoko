@@ -1,13 +1,12 @@
 import type { PageLoad } from './$types';
 import { HolodexApiClient, VideoStatus } from 'holodex.js';
 import { fetchLastLiveData, fetchLiveUpcomingData } from '../utils';
+import { ameChannelID } from '../const';
 
 export const load: PageLoad = (async ({ params: { } }) => {
-	const channelId = "UCyl1z3jo3XHR1riLFKG5UAg";
+	const channelId = ameChannelID; // the channel ID used for fetching all of the app's info
 
-	const client = new HolodexApiClient({
-		apiKey: "37416592-50cc-437c-83a5-2ab3d08d96d0",
-	});
+	const client = new HolodexApiClient({ apiKey: '' });
 
 	let data = async () => {
 		let currentLiveAndUpcoming = await fetchLiveUpcomingData(client, channelId);
