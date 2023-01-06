@@ -1,9 +1,24 @@
 <script>
     import "../app.css";
     import {MetaTags} from 'svelte-meta-tags';
+
+    import amedokoLogo from "$lib/assets/amedoko-light-square.png";
 </script>
 
-<MetaTags title="Ame Doko?" description="Find out when you can see Ame!" />
+<MetaTags title="Ame Doko?" description="Find out when you can see Ame!" openGraph={{
+    type: 'website',
+    url: 'https://amedoko.watsonindustries.live',
+    title: 'Ame Doko?',
+    description: 'Find out where is Ame!',
+    images: [
+      {
+        url: amedokoLogo,
+        width: 384,
+        height: 384,
+        alt: 'Og Image Alt'
+      }
+    ]
+  }}/>
 
 <slot />
 
