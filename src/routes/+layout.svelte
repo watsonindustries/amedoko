@@ -1,25 +1,40 @@
 <script>
     import "../app.css";
-    import {MetaTags} from 'svelte-meta-tags';
+    import { MetaTags } from "svelte-meta-tags";
 
     import amedokoLogo from "$lib/assets/amedoko-light-square.png";
+
+    let url = "https://amedoko.watsonindustries.live";
 </script>
 
-<MetaTags title="Ame Doko?" description="Find out when you can see Ame!" openGraph={{
-    type: 'website',
-    url: 'https://amedoko.watsonindustries.live',
-    title: 'Ame Doko?',
-    description: 'Find out where is Ame!',
-    images: [
-      {
-        url: amedokoLogo,
-        width: 384,
-        height: 384,
-        alt: 'AmeDoko Logo'
-      }
-    ]
-  }}
-  />
+<MetaTags
+    title="Ame Doko?"
+    description="Find out when you can see Ame!"
+    canonical={url}
+    openGraph={{
+        type: "website",
+        url: url,
+        title: "Ame Doko?",
+        description: "Find out where is Ame!",
+        images: [
+            {
+                url: amedokoLogo,
+                width: 384,
+                height: 384,
+                alt: "AmeDoko Logo",
+            },
+        ],
+    }}
+    twitter={{
+        handle: "@danirukun",
+        site: "@amedoko",
+        cardType: "summary",
+        title: "Ame Doko?",
+        description: "Find out where is Ame!",
+        image: amedokoLogo,
+        imageAlt: "AmeDoko Logo",
+    }}
+/>
 
 <slot />
 
@@ -36,10 +51,11 @@
             class="text-center mx-auto underline my-2"
             href="https://github.com/watsonindustries/amedoko">Source Code</a
         >
-        <a class="text-center mx-auto underline" href="/about">
-            About
-        </a>
-        <a class="text-center mx-auto underline" href="https://watsonindustries.live">
+        <a class="text-center mx-auto underline" href="/about"> About </a>
+        <a
+            class="text-center mx-auto underline"
+            href="https://watsonindustries.live"
+        >
             Watson Industries
         </a>
         <a class="text-center mx-auto underline" href="/privacy">
