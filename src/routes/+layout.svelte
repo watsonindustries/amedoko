@@ -2,7 +2,7 @@
     import "../app.css";
     import { MetaTags } from "svelte-meta-tags";
 
-    import amedokoLogo from "$lib/assets/amedoko-light-square.png";
+    import amedokoLogo from "$lib/assets/amedoko-landscape-twitter.png";
 
     let url = "https://amedoko.watsonindustries.live";
 </script>
@@ -11,20 +11,6 @@
     title="Ame Doko?"
     description="Find out when you can see Ame!"
     canonical={url}
-    openGraph={{
-        type: "website",
-        url: url,
-        title: "Ame Doko?",
-        description: "Find out where is Ame!",
-        images: [
-            {
-                url: amedokoLogo,
-                width: 384,
-                height: 384,
-                alt: "AmeDoko Logo",
-            },
-        ],
-    }}
     twitter={{
         handle: "@danirukun",
         site: "@amedoko",
