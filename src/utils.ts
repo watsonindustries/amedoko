@@ -10,11 +10,12 @@ export function diffInDaysFloored(dateA: Date, dateB: Date): number {
 export function deltaFormatted(dateA: Date, dateB: Date): string {
 	let delta = Math.abs(dateA.getTime() - dateB.getTime())
 	const days = (delta / 86400000) | 0
+	const dayname = days > 1 ? 'days' : (days === 1 ? 'day' : '')
 	const hours = ((delta % 86400000) / 3600000) | 0
 	const minutes = ((delta % 3600000) / 60000) | 0
-	// const seconds = Math.round((delta % 60000) / 1000)
+	const seconds = Math.round((delta % 60000) / 1000)
 
-	return `${days} days ${hours} hours ${minutes} minutes`
+	return `${days > 0 ? days : ''} ${dayname} ${hours} hours ${minutes} minutes ${seconds} s`
 }
 
 export async function fetchLastLiveData(client: HolodexApiClient, channelId: string): Promise<Video> {

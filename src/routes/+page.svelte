@@ -4,13 +4,19 @@
     import {deltaFormatted} from '../utils';
 
     import {Icon, Play} from 'svelte-hero-icons';
+    import { writable } from "svelte/store";
 
     export let data: PageData;
-    let currentDate = new Date();
+    let currentDate = writable(new Date());
     console.log(data);
 
+    setInterval(() => {
+        currentDate.update(() => new Date());
+    }, 1000)
+
     let {pastVideo, nextVideo, liveVideo} = data;
-    let lastStreamDelta = deltaFormatted(currentDate, pastVideo.actualStart || pastVideo.scheduledStart || pastVideo.publishedAt);
+    $: lastStreamDelta = deltaFormatted($currentDate, pastVideo.actualStart || pastVideo.scheduledStart || pastVideo.publishedAt);
+    $: nextStreamDelta = deltaFormatted(nextVideo.scheduledStart, $currentDate)
 </script>
 
 <div class="flex flex-col text-ame-dark-brown text-center my-6">
@@ -20,7 +26,8 @@
     <span class="text-center"
         >Ame last seen<a href="https://youtu.be/{pastVideo.videoId}"><p class="font-bold">
             {lastStreamDelta} ago
-        </p></a></span>
+        </p></a>
+    </span>
     {/if}
 
     {#if liveVideo}
@@ -36,8 +43,9 @@
 
     {#if nextVideo}
     <span class="text-center"
-        >Next stream in <a href="https://youtu.be/{nextVideo.videoId}"><p class="font-bold">{deltaFormatted(nextVideo.scheduledStart, currentDate)}</p></a> </span
+        >Next stream in <a href="https://youtu.be/{nextVideo.videoId}"><p class="font-bold">{nextStreamDelta}</p></a> </span
     >
+
     {/if}
 
     <DokoImage />
