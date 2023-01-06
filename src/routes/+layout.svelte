@@ -18,7 +18,17 @@
         alt: 'AmeDoko Logo'
       }
     ]
-  }}/>
+  }}
+  twitter={{
+    handle: '@danirukun',
+    site: '@amedoko',
+    cardType: 'summary',
+    title: 'Ame Doko?',
+    description: 'Find out where is Ame!',
+    image: amedokoLogo,
+    imageAlt: 'AmeDoko Logo'
+  }}
+  />
 
 <slot />
 
