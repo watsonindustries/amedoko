@@ -3,18 +3,18 @@
     import type { PageData } from "./$types";
     import {deltaFormatted} from '../utils';
 
-    import {Icon, Play} from 'svelte-hero-icons';
+    import {Icon, Play, MusicNote} from 'svelte-hero-icons';
     import { writable } from "svelte/store";
 
     export let data: PageData;
     let currentDate = writable(new Date());
-    console.log(data);
 
     setInterval(() => {
         currentDate.update(() => new Date());
     }, 1000)
 
     let {pastVideo, nextVideo, liveVideo} = data;
+
     $: lastStreamDelta = deltaFormatted($currentDate, pastVideo.actualStart || pastVideo.scheduledStart || pastVideo.publishedAt);
     $: nextStreamDelta = deltaFormatted(nextVideo.scheduledStart, $currentDate)
 </script>
@@ -50,4 +50,13 @@
     {/if}
 
     <DokoImage />
+
+    <span class="text-center mx-auto mt-4">
+        <a href="https://www.youtube.com/watch?v=9p89bCMl-iM" class="flex flex-row font-bold text-lg">
+            <Icon src="{MusicNote}" solid size="20" class="mr-1" />
+            Our Anthem
+            <Icon src="{MusicNote}" solid size="20" class="ml-1" />
+        </a>
+
+    </span>
 </div>

@@ -47,9 +47,10 @@
             >Amelia Watson's channel</a
         >
     </div>
-    <div class="flex flex-col">
+
+    <div class="flex flex-col mt-6">
         <a
-            class="text-center mx-auto underline my-2"
+            class="text-center mx-auto underline"
             href="https://github.com/watsonindustries/amedoko">Source Code</a
         >
         <a class="text-center mx-auto underline" href="/about"> About </a>

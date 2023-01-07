@@ -13,7 +13,6 @@
         With AmeDoko, Gators can find out when Ame was last seen and when she is expected to appear again. This can be especially useful for Gators who want to make sure they don't miss out on any opportunities to interact with Ame. Whether you're a TeaMate, Investigator, or simply a casual viewer of Ame, AmeDoko is the perfect tool for staying up-to-date on her movements and schedule. So why wait? Start using AmeDoko today and never miss a chance to see Ame again!
         <img src="https://4.bp.blogspot.com/-yl66-FqOzW0/V5Xc0hLD6VI/AAAAAAAA8uk/RepaNKVeLNAGS-y5rDaqBTI9096-S3oKACLcB/s400/pose_arasagashi.png" alt="A TeaMate looking for Ame."/>
         AmeDoko fetches live stream information from the fantastic <a href="https://holodex.stoplight.io/docs/holodex" class="underline">Holodex API</a>.
-        <br>AmeDoko uses Svelte and SvelteKit under the hood.
         <br><br>
         Big thanks to the following related projects for idea inspiration:
     </p>
