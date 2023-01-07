@@ -42,7 +42,7 @@
     </div>
     {/if}
 
-    {#if nextVideo}
+    {#if nextVideo && !liveVideo}
     <span class="text-center"
         >Next stream in <a href="https://youtu.be/{nextVideo.videoId}"><p class="font-bold">{nextStreamDelta}</p></a> </span
     >
