@@ -1,5 +1,6 @@
 <script lang="ts">
     import DokoImage from "$lib/DokoImage.svelte";
+    import Timer from "$lib/Timer.svelte";
     import type { PageData } from "./$types";
     import {deltaFormatted} from '../utils';
 
@@ -23,10 +24,9 @@
     <h1 class="text-5xl font-bold text-center my-2">Ame Doko?</h1>
     
     {#if !liveVideo}
-    <span class="text-center"
-        >Ame last seen<a href="https://youtu.be/{pastVideo.videoId}"><p class="font-bold">
-            {lastStreamDelta} ago
-        </p></a>
+    <span class="text-center">Ame last seen
+        <br>
+        <Timer videoId={pastVideo.videoId} streamDelta={lastStreamDelta}></Timer> ago
     </span>
     {/if}
 
@@ -43,7 +43,10 @@
 
     {#if nextVideo && !liveVideo}
     <span class="text-center"
-        >Next stream in <a href="https://youtu.be/{nextVideo.videoId}"><p class="font-bold">{nextStreamDelta}</p></a> </span
+        >Next stream in
+        <br>
+        <Timer videoId={nextVideo.videoId} streamDelta={nextStreamDelta}></Timer>
+        </span
     >
 
     {/if}
@@ -56,6 +59,5 @@
             Our Anthem
             <Icon src="{MusicNote}" solid size="20" class="ml-1" />
         </a>
-
     </span>
 </div>
