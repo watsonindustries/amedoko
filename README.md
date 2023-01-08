@@ -1,5 +1,7 @@
 # Amedoko
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6405f063-f91a-447a-8099-72c451ba8aa7/deploy-status)](https://app.netlify.com/sites/startling-hummingbird-1106cf/deploys)
+
 A small [SvelteKit](https://kit.svelte.dev) app for telling where is Ame!
 
 - Find out the last time there was a stream
