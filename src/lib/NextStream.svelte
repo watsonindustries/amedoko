@@ -20,16 +20,16 @@
 </script>
 
 <div
-    class="text-ame-light-yellow bg-ame-dark-brown p-5 my-3 rounded-md max-w-sm shadow-md mx-auto"
+    class="text-ame-light-yellow bg-ame-dark-brown p-5 my-3 rounded-md max-w-sm w-11/12 shadow-md mx-auto"
 >
     Next stream in
     <br />
     <Timer {videoURL} streamDelta={nextStreamDelta} />
-    <a href={videoURL}>
+    <a href={videoURL} >
         <img
             src={thumbnailURL}
             alt={nextVideo.title}
-            class="mt-3 rounded-sm mx-auto"
+            class="mt-3 rounded-sm mx-auto focus:scale-105 active:scale-105 transform-gpu transition-transform"
         />
     </a>
 </div>

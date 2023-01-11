@@ -44,7 +44,7 @@
         <a
             class="text-center mx-auto underline text-2xl"
             href="https://www.youtube.com/channel/UCyl1z3jo3XHR1riLFKG5UAg"
-            >Amelia Watson's channel</a
+            >Amelia Watson's Channel</a
         >
     </div>
 

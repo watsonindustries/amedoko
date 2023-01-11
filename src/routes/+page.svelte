@@ -28,7 +28,7 @@
 </script>
 
 <div class="flex flex-col text-ame-dark-brown text-center my-6">
-    <h1 class="text-5xl font-bold text-center my-2">Ame Doko?</h1>
+    <h1 class="text-5xl font-bold text-center my-3">Ame Doko?</h1>
 
     {#if !liveVideo}
         <LastStream {pastVideo} {lastStreamDelta} />
@@ -49,9 +49,9 @@
             href="https://www.youtube.com/watch?v=9p89bCMl-iM"
             class="flex flex-row font-bold text-lg"
         >
-            <Icon src={MusicNote} solid size="20" class="mr-1" />
+            <Icon src={MusicNote} solid size="20" class="mr-1 animate-bounce" />
             Our Anthem
-            <Icon src={MusicNote} solid size="20" class="ml-1" />
+            <Icon src={MusicNote} solid size="20" class="ml-1 animate-bounce" />
         </a>
     </span>
 </div>

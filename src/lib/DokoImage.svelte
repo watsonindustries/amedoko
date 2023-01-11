@@ -40,7 +40,7 @@
     <img
         src={$activeImg.url}
         alt={$activeImg.alt}
-        class="object-contain"
+        class="object-contain w-3/4 mx-auto rounded-md"
         width="1000"
         height="1000"
     />
