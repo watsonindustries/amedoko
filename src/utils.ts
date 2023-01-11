@@ -49,9 +49,13 @@ export async function fetchNextLiveData(client: HolodexApiClient, channelId: str
 	return videos[0];
 }
 
-/** Returns a promise of an array of both live and upcoming streams for a given channel */
+/** Returns a promise of an array of both live and upcoming streams for a given channel. Uses the fast endpoint. */
 export async function fetchLiveUpcomingData(client: HolodexApiClient, channelId: string): Promise<Video[]> {
 	let videos = await client.getLiveVideosByChannelId(channelId);
 
 	return videos;
+}
+
+export function getVideoThumbnailURL(videoID: String) {
+	return `https://img.youtube.com/vi/${videoID}/mqdefault.jpg`
 }
