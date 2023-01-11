@@ -8,34 +8,36 @@
     const description = "Find out where is Ame!";
 </script>
 
-<MetaTags
-    title="Ame Doko?"
-    description="Find out when you can see Ame!"
-    canonical={url}
-    twitter={{
-        handle: "@danirukun",
-        site: "@amedoko",
-        cardType: "summary",
-        title: "Ame Doko?",
-        description: description,
-        image: amedokoLogo,
-        imageAlt: "AmeDoko Logo",
-    }}
-    openGraph={{
-        type: "website",
-        url: "https://amedoko.watsonindustries.live",
-        title: "Ame Doko?",
-        description: description,
-        images: [
-            {
-                url: amedokoLogo,
-                width: 768,
-                height: 384,
-                alt: "AmeDoko Logo",
-            },
-        ],
-    }}
-/>
+<svelte:head>
+    <MetaTags
+        title="Ame Doko?"
+        description="Find out when you can see Ame!"
+        canonical={url}
+        twitter={{
+            handle: "@danirukun",
+            site: "@amedoko",
+            cardType: "summary",
+            title: "Ame Doko?",
+            description: description,
+            image: amedokoLogo,
+            imageAlt: "AmeDoko Logo",
+        }}
+        openGraph={{
+            type: "website",
+            url: "https://amedoko.watsonindustries.live",
+            title: "Ame Doko?",
+            description: description,
+            images: [
+                {
+                    url: amedokoLogo,
+                    width: 768,
+                    height: 384,
+                    alt: "AmeDoko Logo",
+                },
+            ],
+        }}
+    />
+</svelte:head>
 
 <slot />
 
