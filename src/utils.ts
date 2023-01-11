@@ -59,3 +59,7 @@ export async function fetchLiveUpcomingData(client: HolodexApiClient, channelId:
 export function getVideoThumbnailURL(videoID: String) {
 	return `https://img.youtube.com/vi/${videoID}/mqdefault.jpg`
 }
+
+export function getVideoURL(videoID: String) {
+	return `https://youtu.be/${videoID}`;
+}

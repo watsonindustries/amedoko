@@ -6,7 +6,7 @@
 -->
 <script lang="ts">
     import type { Video } from "holodex.js";
-    import { getVideoThumbnailURL } from "../utils";
+    import { getVideoThumbnailURL, getVideoURL } from "../utils";
 
     import Timer from "./Timer.svelte";
 
@@ -16,7 +16,7 @@
     let { videoId } = nextVideo;
 
     let thumbnailURL = getVideoThumbnailURL(videoId);
-    let videoURL = `https://youtu.be/${videoId}`;
+    let videoURL = getVideoURL(videoId);
 </script>
 
 <div
@@ -24,7 +24,7 @@
 >
     Next stream in
     <br />
-    <Timer videoId={nextVideo.videoId} streamDelta={nextStreamDelta} />
+    <Timer {videoURL} streamDelta={nextStreamDelta} />
     <a href={videoURL}>
         <img
             src={thumbnailURL}
