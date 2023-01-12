@@ -1,42 +1,23 @@
-<script>
+<script lang="ts">
     import "../app.css";
-    import { MetaTags } from "svelte-meta-tags";
 
-    import amedokoLogo from "$lib/assets/amedoko-landscape-twitter.png";
-
-    const url = "https://amedoko.watsonindustries.live";
-    const description = "Find out where is Ame!";
+    import { page } from '$app/stores';
 </script>
 
 <svelte:head>
-    <MetaTags
-        title="Ame Doko?"
-        description="Find out when you can see Ame!"
-        canonical={url}
-        twitter={{
-            handle: "@danirukun",
-            site: "@amedoko",
-            cardType: "summary",
-            title: "Ame Doko?",
-            description: description,
-            image: amedokoLogo,
-            imageAlt: "AmeDoko Logo",
-        }}
-        openGraph={{
-            type: "website",
-            url: "https://amedoko.watsonindustries.live",
-            title: "Ame Doko?",
-            description: description,
-            images: [
-                {
-                    url: amedokoLogo,
-                    width: 768,
-                    height: 384,
-                    alt: "AmeDoko Logo",
-                },
-            ],
-        }}
-    />
+    <meta name="description" content={$page.data.description} />
+    <meta name="theme-color" content={$page.data.themeColor} />
+    <meta name="twitter:card" content={$page.data.twitter.card} />
+    <meta name="twitter:creator" content="@danirukun" />
+    <meta name="twitter:title" content={$page.data.twitter.title} />
+    <meta name="twitter:description" content={$page.data.twitter.description} />
+    <meta name="twitter:image" content={$page.data.twitter.image} />
+
+    <meta property="og:title" content={$page.data.title} />
+    <meta property="og:type" content={$page.data.type} />
+    <meta property="og:url" content={$page.data.url} />
+    <meta property="og:image" content={$page.data.image} />
+    <meta property="og:description" content={$page.data.description} />
 </svelte:head>
 
 <slot />
