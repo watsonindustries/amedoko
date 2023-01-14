@@ -33,7 +33,7 @@
     <h1 class="text-5xl font-bold text-center my-3">Ame Doko?</h1>
 
     {#if !liveVideo}
-        <LastStream {pastVideo} lastStreamDelta={deltaFormatted(lastStreamDelta)} />
+        <LastStream {pastVideo} {lastStreamDelta} />
     {/if}
 
     {#if liveVideo}
@@ -41,7 +41,7 @@
     {/if}
 
     {#if nextVideo && !liveVideo}
-        <NextStream {nextVideo} nextStreamDelta={deltaFormatted(nextStreamDelta)} />
+        <NextStream {nextVideo} {nextStreamDelta} />
     {/if}
 
     <DokoImage />

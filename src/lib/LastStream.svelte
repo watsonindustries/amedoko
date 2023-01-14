@@ -5,11 +5,11 @@
 -->
 <script lang="ts">
     import type { Video } from "holodex.js";
-    import { getVideoURL } from "../utils";
+    import { getVideoURL, deltaFormatted } from "../utils";
     import Timer from "./Timer.svelte";
 
     export let pastVideo: Video;
-    export let lastStreamDelta: String;
+    export let lastStreamDelta: number;
 
     let videoURL = getVideoURL(pastVideo.videoId);
 </script>
@@ -17,5 +17,5 @@
 <div class="text-ame-light-yellow bg-ame-dark-brown p-5 my-3 rounded-md max-w-sm w-11/12 shadow-md mx-auto"
     >Last seen
     <br />
-    <Timer {videoURL} streamDelta={lastStreamDelta} /> ago
+    <Timer {videoURL} streamDelta={deltaFormatted(lastStreamDelta)} /> ago
 </div>

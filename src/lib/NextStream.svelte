@@ -2,16 +2,16 @@
   @component
 
   Displays the next live stream and information about it.
-	Requires a pre-formatted stream delta in the form `X days Y hours` etc.
+	Requires a stream delta in milliseconds.
 -->
 <script lang="ts">
     import type { Video } from "holodex.js";
-    import { getVideoThumbnailURL, getVideoURL } from "../utils";
+    import { getVideoThumbnailURL, getVideoURL, deltaFormatted } from "../utils";
 
     import Timer from "./Timer.svelte";
 
     export let nextVideo: Video;
-    export let nextStreamDelta: String;
+    export let nextStreamDelta: number;
 
     let { videoId } = nextVideo;
 
@@ -24,7 +24,7 @@
 >
     Next stream in
     <br />
-    <Timer {videoURL} streamDelta={nextStreamDelta} />
+    <Timer {videoURL} streamDelta={deltaFormatted(nextStreamDelta)} />
     <a href={videoURL} >
         <img
             src={thumbnailURL}
