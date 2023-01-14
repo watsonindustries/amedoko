@@ -1,7 +1,7 @@
 <script lang="ts">
     import DokoImage from "$lib/DokoImage.svelte";
     import type { PageData } from "./$types";
-    import { deltaFormatted } from "../utils";
+    import { calculateDateDeltaMillis, deltaFormatted } from "../utils";
 
     import { Icon, MusicNote } from "svelte-hero-icons";
     import { writable } from "svelte/store";
@@ -18,20 +18,22 @@
 
     let { pastVideo, nextVideo, liveVideo } = data;
 
-    $: lastStreamDelta = deltaFormatted(
-        $currentDate,
-        pastVideo.actualStart ||
+    let lastStreamStart = pastVideo.actualStart ||
             pastVideo.scheduledStart ||
-            pastVideo.publishedAt
+            pastVideo.publishedAt;
+
+    $: lastStreamDelta = calculateDateDeltaMillis(
+        $currentDate,
+        lastStreamStart
     );
-    $: nextStreamDelta = deltaFormatted(nextVideo.scheduledStart, $currentDate);
+    $: nextStreamDelta = calculateDateDeltaMillis(nextVideo.scheduledStart, $currentDate);
 </script>
 
 <div class="flex flex-col text-ame-dark-brown text-center my-6">
     <h1 class="text-5xl font-bold text-center my-3">Ame Doko?</h1>
 
     {#if !liveVideo}
-        <LastStream {pastVideo} {lastStreamDelta} />
+        <LastStream {pastVideo} lastStreamDelta={deltaFormatted(lastStreamDelta)} />
     {/if}
 
     {#if liveVideo}
@@ -39,7 +41,7 @@
     {/if}
 
     {#if nextVideo && !liveVideo}
-        <NextStream {nextVideo} {nextStreamDelta} />
+        <NextStream {nextVideo} nextStreamDelta={deltaFormatted(nextStreamDelta)} />
     {/if}
 
     <DokoImage />

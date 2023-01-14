@@ -6,9 +6,13 @@ export function diffInDaysFloored(dateA: Date, dateB: Date): number {
 	return Math.floor(diff / 86400000);
 }
 
-/** Returns a formatted delta of 2 dates */
-export function deltaFormatted(dateA: Date, dateB: Date): string {
-	let delta = Math.abs(dateA.getTime() - dateB.getTime())
+/** Returns the delta in milliseconds of 2 date objects, will always be positive */
+export function calculateDateDeltaMillis(dateA, dateB: Date): number {
+	return Math.abs(dateA.getTime() - dateB.getTime())
+}
+
+/** Returns a formatted time string of a time period in milliseconds */
+export function deltaFormatted(delta: number): string {
 	const days = (delta / 86400000) | 0
 	const dayname = days > 1 ? 'days' : (days === 1 ? 'day' : '')
 	const hours = ((delta % 86400000) / 3600000) | 0
@@ -16,13 +20,6 @@ export function deltaFormatted(dateA: Date, dateB: Date): string {
 	const seconds = Math.round((delta % 60000) / 1000)
 
 	return `${days > 0 ? days : ''} ${dayname} ${hours} hours ${minutes} minutes ${seconds} s`
-}
-
-export function getNextElement(array, index) {
-	if (index >= array.length - 1) {
-		return array[0];
-	}
-	return array[index + 1];
 }
 
 export async function fetchLastLiveData(client: HolodexApiClient, channelId: string): Promise<Video> {
