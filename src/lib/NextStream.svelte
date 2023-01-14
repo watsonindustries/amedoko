@@ -14,17 +14,24 @@
     export let nextStreamDelta: number;
 
     let { videoId } = nextVideo;
+    let isStartingSoon = false;
 
     let thumbnailURL = getVideoThumbnailURL(videoId);
     let videoURL = getVideoURL(videoId);
+
+    if (nextStreamDelta < 60_000) isStartingSoon = true;
 </script>
 
 <div
     class="text-ame-light-yellow bg-ame-dark-brown p-5 my-3 rounded-md max-w-sm w-11/12 shadow-md mx-auto"
 >
-    Next stream in
-    <br />
-    <Timer {videoURL} streamDelta={deltaFormatted(nextStreamDelta)} />
+{#if isStartingSoon}
+    <h2 class="text-2xl">Starting soon!</h2>
+{:else}
+<p>Next stream in</p>
+<Timer {videoURL} streamDelta={deltaFormatted(nextStreamDelta)} />
+{/if}
+
     <a href={videoURL} >
         <img
             src={thumbnailURL}
