@@ -30,7 +30,7 @@
 </script>
 
 <div class="flex flex-col text-ame-dark-brown text-center my-6">
-    <h1 class="text-5xl font-bold text-center my-3">Ame Doko?</h1>
+    <h1 class="text-5xl font-bold text-center my-3">Chiku Taku doko?</h1>
 
     {#if !liveVideo}
         <LastStream {pastVideo} {lastStreamDelta} />
