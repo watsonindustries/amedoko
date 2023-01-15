@@ -19,7 +19,7 @@
     let thumbnailURL = getVideoThumbnailURL(videoId);
     let videoURL = getVideoURL(videoId);
 
-    if (nextStreamDelta < 60_000) isStartingSoon = true;
+    $: if (nextStreamDelta < 60_000) isStartingSoon = true;
 </script>
 
 <div
