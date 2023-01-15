@@ -1,7 +1,11 @@
 <script lang="ts">
     import "../app.css";
 
-    import { page } from '$app/stores';
+    import { Icon } from "@steeze-ui/svelte-icon";
+    import { Github } from "@steeze-ui/simple-icons";
+    import { GlobeAlt, EyeOff, QuestionMarkCircle } from "svelte-hero-icons";
+
+    import { page } from "$app/stores";
 </script>
 
 <svelte:head>
@@ -31,21 +35,36 @@
         >
     </div>
 
-    <div class="flex flex-col mt-6">
+    <div class="flex flex-col mt-6 space-y-2">
         <a
-            class="text-center mx-auto underline"
-            href="https://github.com/watsonindustries/amedoko">Source Code</a
+            class="inline-flex items-center justify-center hover:underline"
+            href="/about"
         >
-        <a class="text-center mx-auto underline" href="/about"> About </a>
+            <Icon src={QuestionMarkCircle} solid size="16" />
+            <p class="ml-1">About</p>
+        </a>
+
         <a
-            class="text-center mx-auto underline"
+            class="inline-flex items-center justify-center hover:underline"
             href="https://watsonindustries.live"
         >
-            Watson Industries
+            <Icon src={GlobeAlt} solid size="16" />
+            <p class="ml-1">Watson Industries</p>
         </a>
-        <a class="text-center mx-auto underline" href="/privacy">
-            Privacy Policy
+
+        <a
+            class="inline-flex items-center justify-center hover:underline"
+            href="/privacy"
+        >
+            <Icon src={EyeOff} solid size="16" />
+            <p class="ml-1">Privacy Policy</p>
         </a>
+
+        <a
+            class="inline-flex items-center justify-center hover:underline"
+            href="https://github.com/watsonindustries/amedoko"
+            ><Icon src={Github} solid size="16" class="mr-1" /> Source Code</a
+        >
     </div>
     <div class="flex flex-row mx-auto py-5">
         <p class="mx-1">Copyright © Watson Industries Inc.</p>
