@@ -1,7 +1,7 @@
 <script lang="ts">
     import DokoImage from "$lib/DokoImage.svelte";
     import type { PageData } from "./$types";
-    import { calculateDateDeltaMillis, deltaFormatted } from "../utils";
+    import { calculateDateDeltaMillis } from "../utils";
 
     import { Icon, MusicNote } from "svelte-hero-icons";
     import { writable } from "svelte/store";
@@ -12,11 +12,15 @@
     export let data: PageData;
     let currentDate = writable(new Date());
 
+    const headline = "Stream Chiku Taku!";
+
     setInterval(() => {
         currentDate.set(new Date());
     }, 1000);
 
     let { pastVideo, nextVideo, liveVideo } = data;
+
+    let nextStreamDelta;
 
     let lastStreamStart = pastVideo.actualStart ||
             pastVideo.scheduledStart ||
@@ -26,11 +30,14 @@
         $currentDate,
         lastStreamStart
     );
-    $: nextStreamDelta = calculateDateDeltaMillis(nextVideo.scheduledStart, $currentDate);
+
+    $: if (nextVideo) {
+        nextStreamDelta = calculateDateDeltaMillis(nextVideo.scheduledStart, $currentDate);
+    }
 </script>
 
 <div class="flex flex-col text-ame-dark-brown text-center my-6">
-    <h1 class="text-5xl font-bold text-center my-3">Chiku Taku doko?</h1>
+    <h1 class="text-5xl font-bold text-center my-3">{headline}</h1>
 
     {#if !liveVideo}
         <LastStream {pastVideo} {lastStreamDelta} />
