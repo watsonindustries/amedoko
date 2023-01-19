@@ -1,10 +1,10 @@
 import type { PageLoad } from './$types';
 import { HolodexApiClient, VideoStatus } from 'holodex.js';
 import { fetchLastLiveData, fetchLiveUpcomingData } from '../utils';
-import { ameChannelID } from '../const';
+import { AME_CHANNEL_ID, FREECHAT_REGEX } from '../const';
 
 export const load: PageLoad = (async ({ params: { } }) => {
-	const channelId = ameChannelID; // the channel ID used for fetching all of the app's info
+	const channelId = AME_CHANNEL_ID; // the channel ID used for fetching all of the app's info
 
 	const client = new HolodexApiClient({ apiKey: '' });
 
@@ -15,6 +15,7 @@ export const load: PageLoad = (async ({ params: { } }) => {
 		let liveVideo = currentLiveAndUpcoming.find(video => video.status === VideoStatus.Live);
 		let nextVideo = currentLiveAndUpcoming
 			.sort((a, b) => a.scheduledStart.getTime() - b.scheduledStart.getTime())
+			.filter(video => !FREECHAT_REGEX.test(video.title))
 			.find(video => video.status === VideoStatus.Upcoming);
 
 		return { pastVideo, liveVideo, nextVideo };
