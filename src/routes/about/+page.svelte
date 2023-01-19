@@ -9,8 +9,8 @@
 <div class="flex flex-col mx-8 md:mx-36 lg:mx-72 xl:mx-96 my-5 text-ame-dark-brown">
     <h1 class="text-5xl text-center my-2 mt-2">About</h1>
     <p class="my-2 text-xl">
-        AmeDoko is a web application developed by <a href="https://watsonindustries.live" class="underline">Watson Industries</a> that enables TeaMates to track the whereabouts of a person named Ame. 
-        With AmeDoko, Gators can find out when Ame was last seen and when she is expected to appear again. This can be especially useful for Gators who want to make sure they don't miss out on any opportunities to interact with Ame. Whether you're a TeaMate, Investigator, or simply a casual viewer of Ame, AmeDoko is the perfect tool for staying up-to-date on her movements and schedule. So why wait? Start using AmeDoko today and never miss a chance to see Ame again!
+        AmeDoko is a web application developed by <a href="https://watsonindustries.live" class="underline">Watson Industries</a> that enables TeaMates to track the whereabouts of Ame. 
+        With AmeDoko, Gators can find out when Ame was last seen and when she is expected to appear again. This can be especially useful for Gators who want to make sure they don't miss out on any Ame streams. Whether you're a TeaMate, Investigator, or simply a casual viewer of Ame, AmeDoko is the perfect tool for staying up-to-date on her schedule. So why wait? Start using AmeDoko today and never miss a chance to see Ame again!
         <img src="https://4.bp.blogspot.com/-yl66-FqOzW0/V5Xc0hLD6VI/AAAAAAAA8uk/RepaNKVeLNAGS-y5rDaqBTI9096-S3oKACLcB/s400/pose_arasagashi.png" alt="A TeaMate looking for Ame."/>
         AmeDoko fetches live stream information from the fantastic <a href="https://holodex.stoplight.io/docs/holodex" class="underline">Holodex API</a>.
         <br><br>
