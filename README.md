@@ -30,3 +30,7 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 The current deployment adapter is set to Netlify.
+
+## Forking
+
+Want to make your own Hololive/other vtuber tracker? Check out the [FORKING guide](FORKING.md)!
