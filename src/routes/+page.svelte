@@ -12,7 +12,7 @@
     export let data: PageData;
     let currentDate = writable(new Date());
 
-    const headline = "Stream Chiku Taku!";
+    let headline = "Ame Doko?";
 
     setInterval(() => {
         currentDate.set(new Date());
@@ -34,6 +34,8 @@
     $: if (nextVideo) {
         nextStreamDelta = calculateDateDeltaMillis(nextVideo.scheduledStart, $currentDate);
     }
+
+    if (liveVideo) headline = "Ame Koko!";
 </script>
 
 <div class="flex flex-col text-ame-dark-brown text-center my-6">
