@@ -38,6 +38,10 @@
     if (liveVideo) headline = "Ame Koko!";
 </script>
 
+<svelte:head>
+    <title>{data.title}</title>
+</svelte:head>
+
 <div class="flex flex-col text-ame-dark-brown text-center my-6">
     <h1 class="text-5xl font-bold text-center my-3">{headline}</h1>
 
