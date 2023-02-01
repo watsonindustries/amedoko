@@ -18,7 +18,9 @@ export const load: PageLoad = (async ({ params: { } }) => {
 			.filter(video => !FREECHAT_REGEX.test(video.title))
 			.find(video => video.status === VideoStatus.Upcoming);
 
-		return { pastVideo, liveVideo, nextVideo };
+		let title = "Amedoko - Home"
+
+		return { pastVideo, liveVideo, nextVideo, title };
 	};
 
 	return await data();
