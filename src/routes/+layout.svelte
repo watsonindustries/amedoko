@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-    <meta name="description" content={$page.data.description} />
+    <!-- <meta name="description" content={$page.data.description} />
     <meta name="theme-color" content={$page.data.themeColor} />
     <meta name="twitter:card" content={$page.data.twitter.card} />
     <meta name="twitter:creator" content="@danirukun" />
@@ -21,7 +21,24 @@
     <meta property="og:type" content={$page.data.type} />
     <meta property="og:url" content={$page.data.url} />
     <meta property="og:image" content={$page.data.image} />
-    <meta property="og:description" content={$page.data.description} />
+    <meta property="og:description" content={$page.data.description} /> -->
+
+  <!-- HTML Meta Tags -->
+  <meta name="description" content="Find out where is Ame!">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://amedoko.watsonindustries.live">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Find out where is Ame!">
+  <meta property="og:image" content={$page.data.image}>
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="amedoko.watsonindustries.live">
+  <meta property="twitter:url" content="https://amedoko.watsonindustries.live">
+  <meta name="twitter:description" content="Find out where is Ame!">
+  <meta name="twitter:image" content={$page.data.image}>
+        
 </svelte:head>
 
 <slot />

@@ -22,9 +22,10 @@
 
     let nextStreamDelta;
 
-    let lastStreamStart = pastVideo.actualStart ||
-            pastVideo.scheduledStart ||
-            pastVideo.publishedAt;
+    let lastStreamStart =
+        pastVideo.actualStart ||
+        pastVideo.scheduledStart ||
+        pastVideo.publishedAt;
 
     $: lastStreamDelta = calculateDateDeltaMillis(
         $currentDate,
@@ -32,7 +33,10 @@
     );
 
     $: if (nextVideo) {
-        nextStreamDelta = calculateDateDeltaMillis(nextVideo.scheduledStart, $currentDate);
+        nextStreamDelta = calculateDateDeltaMillis(
+            nextVideo.scheduledStart,
+            $currentDate
+        );
     }
 
     if (liveVideo) headline = "Ame Koko!";
@@ -40,6 +44,9 @@
 
 <svelte:head>
     <title>{data.title}</title>
+
+    <meta property="og:title" content={data.title} />
+    <meta name="twitter:title" content={data.title} />
 </svelte:head>
 
 <div class="flex flex-col text-ame-dark-brown text-center my-6">
