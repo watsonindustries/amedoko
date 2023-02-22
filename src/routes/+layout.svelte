@@ -17,6 +17,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Find out where is Ame!" />
     <meta property="og:image" content={$page.data.image} />
+    <meta property="og:image:secure_url" content={$page.data.image} />
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content="amedoko.watsonindustries.live" />
