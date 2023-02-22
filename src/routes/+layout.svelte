@@ -9,36 +9,24 @@
 </script>
 
 <svelte:head>
-    <!-- <meta name="description" content={$page.data.description} />
-    <meta name="theme-color" content={$page.data.themeColor} />
-    <meta name="twitter:card" content={$page.data.twitter.card} />
-    <meta name="twitter:creator" content="@danirukun" />
-    <meta name="twitter:title" content={$page.data.twitter.title} />
-    <meta name="twitter:description" content={$page.data.twitter.description} />
-    <meta name="twitter:image" content={$page.data.twitter.image} />
+    <!-- HTML Meta Tags -->
+    <meta name="description" content="Find out where is Ame!" />
 
-    <meta property="og:title" content={$page.data.title} />
-    <meta property="og:type" content={$page.data.type} />
-    <meta property="og:url" content={$page.data.url} />
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://amedoko.watsonindustries.live" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Find out where is Ame!" />
     <meta property="og:image" content={$page.data.image} />
-    <meta property="og:description" content={$page.data.description} /> -->
-
-  <!-- HTML Meta Tags -->
-  <meta name="description" content="Find out where is Ame!">
-
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://amedoko.watsonindustries.live">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="Find out where is Ame!">
-  <meta property="og:image" content={$page.data.image}>
-
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="amedoko.watsonindustries.live">
-  <meta property="twitter:url" content="https://amedoko.watsonindustries.live">
-  <meta name="twitter:description" content="Find out where is Ame!">
-  <meta name="twitter:image" content={$page.data.image}>
-        
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="amedoko.watsonindustries.live" />
+    <meta
+        property="twitter:url"
+        content="https://amedoko.watsonindustries.live"
+    />
+    <meta name="twitter:title" content={$page.data.title} />
+    <meta name="twitter:description" content="Find out where is Ame!" />
+    <meta name="twitter:image" content={$page.data.twitter.image} />
 </svelte:head>
 
 <slot />

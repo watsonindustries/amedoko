@@ -44,9 +44,6 @@
 
 <svelte:head>
     <title>{data.title}</title>
-
-    <meta property="og:title" content={data.title} />
-    <meta name="twitter:title" content={data.title} />
 </svelte:head>
 
 <div class="flex flex-col text-ame-dark-brown text-center my-6">
