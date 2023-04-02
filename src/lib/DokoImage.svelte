@@ -12,18 +12,18 @@
         { url: gatorBox, alt: "Gator in a box" },
         { url: amewhereGator, alt: "Ame where gator comic" },
         { url: missingAme, alt: "Missing Ame poster by CaptPolybius" },
-        {
-            url: "https://findthatmeme.us-southeast-1.linodeobjects.com/7d36103d-777e-4d8d-8c78-7474a8b0722a.png",
-            alt: "Ame Doko Kiara Gosling",
-        },
-        {
-            url: "https://findthatmeme.us-southeast-1.linodeobjects.com/104873cb-49f4-41e5-b6d4-6b9f5e4c7b88.png",
-            alt: "Ame Dojo",
-        },
-        {
-            url: "https://pbs.twimg.com/media/E47eC0BX0AUCHs1.jpg",
-            alt: "Ame Doko sleeper",
-        },
+        // {
+        //     url: "https://findthatmeme.us-southeast-1.linodeobjects.com/7d36103d-777e-4d8d-8c78-7474a8b0722a.png",
+        //     alt: "Ame Doko Kiara Gosling",
+        // },
+        // {
+        //     url: "https://findthatmeme.us-southeast-1.linodeobjects.com/104873cb-49f4-41e5-b6d4-6b9f5e4c7b88.png",
+        //     alt: "Ame Dojo",
+        // },
+        // {
+        //     url: "https://pbs.twimg.com/media/E47eC0BX0AUCHs1.jpg",
+        //     alt: "Ame Doko sleeper",
+        // },
     ];
 
     let i = getRandomIntInclusive(0, imgCollection.length - 1);
