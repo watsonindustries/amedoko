@@ -3,7 +3,7 @@
     import type { PageData } from "./$types";
     import { calculateDateDeltaMillis } from "../utils";
 
-    import { Icon, MusicNote } from "svelte-hero-icons";
+    import { Icon, Play } from "svelte-hero-icons";
     import { writable } from "svelte/store";
     import NextStream from "$lib/NextStream.svelte";
     import LiveStream from "$lib/LiveStream.svelte";
@@ -13,6 +13,7 @@
     let currentDate = writable(new Date());
 
     let headline = "Ame Doko?";
+    let chikuTakuURL = "https://watsonamelia.itch.io/chikutaku";
 
     setInterval(() => {
         currentDate.set(new Date());
@@ -65,12 +66,11 @@
 
     <span class="text-center mx-auto mt-4">
         <a
-            href="https://www.youtube.com/watch?v=9p89bCMl-iM"
-            class="flex flex-row font-bold text-lg"
+            href={chikuTakuURL}
+            type="button"
+            class="flex flex-row text-ame-light-yellow bg-ame-dark-brown hover:bg-amber-900 hover:scale-105 transition-transform transform-gpu focus:ring-4 focus:ring-stone-300 font-medium rounded-full text-sm px-5 py-2.5 my-3 shadow-md focus:outline-none"
         >
-            <Icon src={MusicNote} solid size="20" class="mr-1 animate-bounce" />
-            Our Anthem
-            <Icon src={MusicNote} solid size="20" class="ml-1 animate-bounce" />
+            <Icon src={Play} solid size="20" class="mr-1" />Play Chiku Taku!
         </a>
     </span>
 </div>
