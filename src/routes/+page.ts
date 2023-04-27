@@ -6,7 +6,7 @@ import { AME_CHANNEL_ID, FREECHAT_REGEX } from '../const';
 export const load: PageLoad = (async ({ params: { } }) => {
 	const channelId = AME_CHANNEL_ID; // the channel ID used for fetching all of the app's info
 
-	const client = new HolodexApiClient({ apiKey: '' });
+	const client = new HolodexApiClient({ apiKey: '4c00fb7c-68f8-4fd7-8bd5-475783f233f6' });
 
 	let data = async () => {
 		let currentLiveAndUpcoming = await fetchLiveUpcomingData(client, channelId);
