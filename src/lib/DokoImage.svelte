@@ -27,7 +27,7 @@
     ];
 
     let i = getRandomIntInclusive(0, imgCollection.length - 1);
-    $: activeImg = writable(imgCollection[i]);
+    let activeImg = writable(imgCollection[i]);
 
     function getRandomIntInclusive(min, max) {
         min = Math.ceil(min);
@@ -53,7 +53,7 @@
     <img
         src={$activeImg.url}
         alt={$activeImg.alt}
-        class="object-contain w-3/4 mx-auto rounded-md"
+        class="object-contain w-3/4 mx-auto rounded-xl"
         width="1000"
         height="1000"
     />

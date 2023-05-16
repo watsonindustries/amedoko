@@ -14,7 +14,7 @@
     let videoURL = getVideoURL(pastVideo.videoId);
 </script>
 
-<div class="text-ame-light-yellow bg-ame-dark-brown p-5 my-3 rounded-md max-w-sm w-11/12 shadow-md mx-auto"
+<div class="text-ame-light-yellow bg-ame-dark-brown p-5 my-3 rounded-xl max-w-sm w-11/12 shadow-md mx-auto"
     >Last seen
     <br />
     <Timer {videoURL} streamDelta={deltaFormatted(lastStreamDelta)} /> ago

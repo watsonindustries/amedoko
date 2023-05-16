@@ -17,7 +17,7 @@
         <a
             href="https://youtu.be/{liveVideo.videoId}"
             type="button"
-            class="flex flex-row text-ame-light-yellow bg-ame-red hover:bg-red-800 hover:scale-105 transition-transform transform-gpu animate-pulse focus:ring-4 focus:ring-stone-300 font-medium rounded-lg text-sm px-5 py-2.5 my-3 focus:outline-none"
+            class="flex flex-row text-ame-light-yellow bg-ame-red hover:bg-red-800 hover:scale-105 transition-transform transform-gpu animate-pulse focus:ring-4 focus:ring-stone-300 font-medium rounded-xl text-sm px-5 py-2.5 my-3 focus:outline-none"
         >
             <Icon src={Play} solid size="20" class="mr-1" />Watch on YouTube
         </a>
