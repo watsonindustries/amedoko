@@ -8,7 +8,7 @@
     <title>AmeDoko - Privacy</title>
 </svelte:head>
 
-<div class="flex flex-col mx-8 md:mx-36 lg:mx-72 xl:mx-96 my-5 text-ame-dark-brown">
+<div class="flex flex-col mx-8 md:mx-36 lg:mx-72 xl:mx-96 py-5 text-ame-dark-brown">
     <h1 class="text-5xl text-center my-2 mt-2">Privacy Policy</h1>
     <p class="my-2 text-xl text-center">
         We don't want or need your cookies.

@@ -10,7 +10,7 @@
     <title>AmeDoko - About</title>
 </svelte:head>
 
-<div class="flex flex-col mx-8 md:mx-36 lg:mx-72 xl:mx-96 my-5 text-ame-dark-brown">
+<div class="flex flex-col py-4 px-4 text-ame-dark-brown max-w-2xl mx-auto">
     <h1 class="text-5xl text-center my-2 mt-2">About</h1>
     <p class="my-2 text-xl">
         AmeDoko is a web application developed by <a href="https://watsonindustries.live" class="underline">Watson Industries</a> that enables TeaMates to track the whereabouts of Ame. 
