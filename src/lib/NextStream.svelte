@@ -23,7 +23,7 @@
 </script>
 
 <div
-    class="text-ame-light-yellow bg-ame-dark-brown p-5 my-3 rounded-md max-w-sm w-11/12 shadow-md mx-auto"
+    class="text-ame-light-yellow bg-ame-dark-brown p-5 my-3 rounded-xl max-w-sm w-11/12 shadow-md mx-auto"
 >
 {#if isStartingSoon}
     <h2 class="text-2xl">Starting soon!</h2>

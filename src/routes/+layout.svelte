@@ -30,54 +30,54 @@
     <meta name="twitter:image" content={$page.data.twitter.image} />
 </svelte:head>
 
-<div class="bg-cogs bg-ame-light-yellow bg-fixed">
+<div class="bg-cogs bg-ame-light-yellow bg-fixed min-h-screen">
     <slot />
 
-<footer class="flex flex-col mt-auto text-ame-dark-brown">
-    <div class="flex">
-        <a
-            class="text-center mx-auto underline text-2xl"
-            href="https://www.youtube.com/channel/UCyl1z3jo3XHR1riLFKG5UAg"
-            >Amelia Watson's Channel</a
-        >
-    </div>
+    <footer class="flex flex-col mt-auto text-ame-dark-brown">
+        <div class="flex">
+            <a
+                class="text-center mx-auto underline text-2xl"
+                href="https://www.youtube.com/channel/UCyl1z3jo3XHR1riLFKG5UAg"
+                >Amelia Watson's Channel</a
+            >
+        </div>
 
-    <div class="flex flex-col mt-6 space-y-2">
-        <a
-            class="inline-flex items-center justify-center hover:underline"
-            href="/about"
-        >
-            <Icon src={QuestionMarkCircle} solid size="16" />
-            <p class="ml-1">About</p>
-        </a>
+        <div class="flex flex-col mt-6 space-y-2">
+            <a
+                class="inline-flex items-center justify-center hover:underline"
+                href="/about"
+            >
+                <Icon src={QuestionMarkCircle} solid size="16" />
+                <p class="ml-1">About</p>
+            </a>
 
-        <a
-            class="inline-flex items-center justify-center hover:underline"
-            href="https://watsonindustries.live"
-        >
-            <Icon src={GlobeAlt} solid size="16" />
-            <p class="ml-1">Watson Industries</p>
-        </a>
+            <a
+                class="inline-flex items-center justify-center hover:underline"
+                href="https://watsonindustries.live"
+            >
+                <Icon src={GlobeAlt} solid size="16" />
+                <p class="ml-1">Watson Industries</p>
+            </a>
 
-        <a
-            class="inline-flex items-center justify-center hover:underline"
-            href="/privacy"
-        >
-            <Icon src={EyeOff} solid size="16" />
-            <p class="ml-1">Privacy Policy</p>
-        </a>
+            <a
+                class="inline-flex items-center justify-center hover:underline"
+                href="/privacy"
+            >
+                <Icon src={EyeOff} solid size="16" />
+                <p class="ml-1">Privacy Policy</p>
+            </a>
 
-        <a
-            class="inline-flex items-center justify-center hover:underline"
-            href="https://github.com/watsonindustries/amedoko"
-            ><Icon src={Github} solid size="16" class="mr-1" /> Source Code</a
-        >
-    </div>
-    <div class="flex flex-row mx-auto py-5">
-        <p class="mx-1">Copyright © Watson Industries Inc.</p>
-        <p class="mx-1">Not affiliated with Cover Corp in any way.</p>
-    </div>
-</footer>
+            <a
+                class="inline-flex items-center justify-center hover:underline"
+                href="https://github.com/watsonindustries/amedoko"
+                ><Icon src={Github} solid size="16" class="mr-1" /> Source Code</a
+            >
+        </div>
+        <div class="flex flex-row mx-auto py-5">
+            <p class="mx-1">Copyright © Watson Industries Inc.</p>
+            <p class="mx-1">Not affiliated with Cover Corp in any way.</p>
+        </div>
+    </footer>
 
 </div>
 
