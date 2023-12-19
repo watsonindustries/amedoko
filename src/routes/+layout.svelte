@@ -3,7 +3,7 @@
 
     import { Icon } from "@steeze-ui/svelte-icon";
     import { Github } from "@steeze-ui/simple-icons";
-    import { GlobeAlt, EyeOff, QuestionMarkCircle } from "svelte-hero-icons";
+    import { GlobeAlt, Eye, QuestionMarkCircle } from "svelte-hero-icons";
 
     import { page } from "$app/stores";
 </script>
@@ -63,7 +63,7 @@
                 class="inline-flex items-center justify-center hover:underline"
                 href="/privacy"
             >
-                <Icon src={EyeOff} solid size="16" />
+                <Icon src={Eye} solid size="16" />
                 <p class="ml-1">Privacy Policy</p>
             </a>
 

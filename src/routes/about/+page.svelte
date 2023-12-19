@@ -1,9 +1,5 @@
 <script lang="ts">
-    import type { PageData } from "./$types";
-
     import { Icon, Home } from "svelte-hero-icons";
-
-    export let data: PageData;
 </script>
 
 <svelte:head>
