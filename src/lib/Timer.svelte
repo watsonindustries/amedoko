@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let videoURL, streamDelta: String;
+	export let videoURL, streamDelta: string;
 </script>
 
 <a href={videoURL} class="font-bold">{streamDelta}</a>

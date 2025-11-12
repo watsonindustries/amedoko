@@ -6,6 +6,7 @@
     import { GlobeAlt, Eye, QuestionMarkCircle } from "svelte-hero-icons";
 
     import { page } from "$app/stores";
+    import { resolve } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -45,7 +46,7 @@
         <div class="flex flex-col my-6 space-y-2" role="list">
             <a
                 class="inline-flex items-center justify-center hover:underline"
-                href="/about"
+                href={resolve("/about")}
             >
                 <Icon src={QuestionMarkCircle} solid size="16" />
                 <p class="ml-1">About</p>
@@ -61,7 +62,7 @@
 
             <a
                 class="inline-flex items-center justify-center hover:underline"
-                href="/privacy"
+                href={resolve("/privacy")}
             >
                 <Icon src={Eye} solid size="16" />
                 <p class="ml-1">Privacy Policy</p>

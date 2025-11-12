@@ -1,3 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+    --color-ame-light-yellow: #f2d7b6;
+    --color-ame-dark-brown: #40302b;
+    --color-ame-red: #bf545d;
+}
+
